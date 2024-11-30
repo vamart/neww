@@ -7,6 +7,7 @@ services:
       - "8080:80"             # Перенаправляем локальный порт 8080 на порт 80 контейнера
     volumes:
       - ./app:/var/www/html   # Привязываем папку app к /var/www/html в контейнере
+      - ./app/vendor:/var/www/html/vendor
     depends_on:
       - db                    # Указываем зависимость от сервиса db
 
